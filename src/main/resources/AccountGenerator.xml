@@ -5,12 +5,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean name="accountGenerator" class="account.SixNumberAccount" />
-	<bean name="accountGenerator2" class="account.EightNumberAccount" />
-
-
-	<bean class="account.AccountGenerator">
-		<constructor-arg index="0" ref="accountGenerator" />
+	<bean name="accountGenerator" class="account.AccountGenerator">
+		<constructor-arg index="0" ref="accountNumberGenerator" />
 	</bean>
+	
+	<!-- <bean name="accountNumberGenerator" class="account.TenNumberAccount" /> -->
+	<!-- <bean name="accountNumberGenerator" class="account.EightNumberAccount" /> -->
+	<bean name="accountNumberGenerator" class="account.SixNumberAccount" />
+
+
+	
 
 </beans>

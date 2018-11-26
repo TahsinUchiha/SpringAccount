@@ -2,6 +2,12 @@ package account;
 
 public interface IAccountGenerator {
 
-	String generateAccountNumber();
+	default String generateAccountNumber(int N) {
+		N++;
+		String[] Prizes = { "A", "B", "C" };
+		return Prizes[(int) Math.floor(Math.random() * 3)] + String.valueOf(N);
+	}
 	
+	String accountNumber();
+
 }

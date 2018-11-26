@@ -12,8 +12,7 @@ public class Run {
 
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("AccountGenerator.xml");
 		IAccountGenerator accountGenerator = ctx.getBean(IAccountGenerator.class);
-		
-		System.out.println(accountGenerator.generateAccountNumber());
+		System.out.println(accountGenerator.accountNumber());
 
 	}
 
